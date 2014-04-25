@@ -1,0 +1,10 @@
+le but d'un script est d'automatisé une tache récurante
+
+Un début de script commence toujours par appeler l'interpreteur :
+
+#!/bin/bash
+#!/bin/sh
+
+Les Variables :
+Toujours en MAJUSCULE suicvie d'un '='
+
