@@ -6,5 +6,6 @@ Un début de script commence toujours par appeler l'interpreteur :
 #!/bin/sh
 
 Les Variables :
-Toujours en MAJUSCULE suicvie d'un '='
-
+Toujours en MAJUSCULE suivie d'un '='
+until -> tant que
+while -> jusqu'a ce que 
