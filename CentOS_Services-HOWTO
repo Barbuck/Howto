@@ -1,0 +1,11 @@
+====================
+Service CentOS-HOWTO (c) Guillaume Bocquet 2014
+====================
+
+gestion des services aux démarrages
+chkconfig --list "service"
+chkconfig "service" off
+
+ntsysv --level 2345
+
+

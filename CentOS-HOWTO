@@ -41,13 +41,17 @@ téléchargé les packets à l'adresse lynx http://mirrors.centos.org
       par exemple
       rpm -q vim-common 
       l'option -q définie une requête pour savoir si le paquet est installé
-
+      rpm -qa
+      l'option -a signifie all
+      rpm -qa | grep kernel | grep 371.e15 | xargs rpm -e
+      
+      installer les paquets 
       rpm -ivh vim-common
       les options -ivh  install verbose htag
-                     -       -       -
+                    
 
    supprimer un paquet
      rpm -e l'option -r signifie erase 
 
 
-Les paquets s'installe dans 
+
