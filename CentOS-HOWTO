@@ -1,0 +1,16 @@
+ ==============
+  HOWTO CentOs  (c) Bocquet Guillaume 2014
+ ==============
+
+ Introduction
+ ------------
+
+Community ENTreprise Operation Système ( Version Libre de Red Hat ).
+Red Hat Entreprise Linux : Version Payante mais fidèle à la Gnu Public Licence.
+
+La différence entre les deux versions est seulement une question éstétique.
+Redhat soutien CentOS pour leur retour de Bug qui permet des corrections aux niveau de Redhat,
+La nouveauté c'est que l'entreprise de RedHat paye des dévellopeurs de CentOS.
+
+Oracle Linux : n'est qu'une version de redhat basé sur un simple patch aux niveau du Kernel
+qui permet de traité des opérations sur les bases de données 
