@@ -13,4 +13,41 @@ Redhat soutien CentOS pour leur retour de Bug qui permet des corrections aux niv
 La nouveauté c'est que l'entreprise de RedHat paye des dévellopeurs de CentOS.
 
 Oracle Linux : n'est qu'une version de redhat basé sur un simple patch aux niveau du Kernel
-qui permet de traité des opérations sur les bases de données 
+qui permet de traité des opérations sur les bases de données
+
+ 
+ Installation version 6.5
+ ------------------------
+
+Partitionnement de base :
+
+ /boot -> 100 Mo
+ SWAP -> 1x la Mémoire vive 2048 Mo
+ / -> Total Espace Libre
+
+  
+
+ 
+ gestion  des paquets
+ ------------------------
+téléchargé les packets à l'adresse lynx http://mirrors.centos.org  
+
+  Avec Yum : 
+    'Yum check-update' : équivalant d'un slackpkg update
+    'yum search openssh' : équivalant d'un slackpkg searchvec yum 
+    yum install man
+
+    avec rpm, la gestion des dépendances ne se fait pas automatiquement
+      par exemple
+      rpm -q vim-common 
+      l'option -q définie une requête pour savoir si le paquet est installé
+
+      rpm -ivh vim-common
+      les options -ivh  install verbose htag
+                     -       -       -
+
+   supprimer un paquet
+     rpm -e l'option -r signifie erase 
+
+
+Les paquets s'installe dans 
