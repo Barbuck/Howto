@@ -1,0 +1,34 @@
+============
+Debian-HOWTO (c) Guillaume Bocquet 
+============
+
+Introduction
+------------
+
+Le processus de dévellopement est completment transparant et ouvert,
+ constamment 3 veresion dispo :
+          
+           |--> (3) version stable ( weezy version 7.0 )
+           |
+     |--> (2) version test ( ) version en cours de dévellopement
+     | 
+    (1) version unstable ( Sid ) en cours de dévellopement Debian Bleeding Age
+
+ 
+ Installation
+ -----------
+Télécharger Debian : http://www.debian.org/CD/http:ftp/#stable
+
+partitionner 
+/boot ext2    100 Mo
+Swap  ext4    Egale à la RAM si supérieur à 512Mo, si inférieur à 512Mo swap= 2x la RAM
+/     ext4    Partition Principale
+
+choix du noyaux :
+486 pour les vielles machines mono-processeur
+686 pour les machines récentes
+
+config de l'outil de gestion des paquets:
+Cocher oui, pour permettre l'installation des paquets non-libre
+
+
