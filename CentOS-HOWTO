@@ -25,11 +25,16 @@ Partitionnement de base :
  SWAP -> 1x la Mémoire vive 2048 Mo
  / -> Total Espace Libre
 
+
   
 
+
  
- gestion  des paquets
- ------------------------
+ gestion  des paquets  yum / RPM 
+ -------------------------------
+( voir RPM-HOWTO (c) Nikki Kovacs 2009 )
+https://github.com/kikinovak/slackware/Linux-HOWTo/RPM-HOWTO.tx
+
 téléchargé les packets à l'adresse lynx http://mirrors.centos.org  
 
   Avec Yum : 
@@ -37,21 +42,59 @@ téléchargé les packets à l'adresse lynx http://mirrors.centos.org
     'yum search openssh' : équivalant d'un slackpkg searchvec yum 
     yum install man
 
-    avec rpm, la gestion des dépendances ne se fait pas automatiquement
-      par exemple
-      rpm -q vim-common 
-      l'option -q définie une requête pour savoir si le paquet est installé
-      rpm -qa
-      l'option -a signifie all
-      rpm -qa | grep kernel | grep 371.e15 | xargs rpm -e
-      
-      installer les paquets 
-      rpm -ivh vim-common
-      les options -ivh  install verbose htag
-                    
+  Avec rpm, la gestion des dépendances ne se fait pas automatiquement
+     
+par exemple
+# rpm -q vim-common 
+     l'option -q définie une requête pour savoir si le paquet est installé
+       
+# rpm -qa
+     l'option -a signifie all
 
-   supprimer un paquet
-     rpm -e l'option -r signifie erase 
+# rpm -qa | grep kernel | grep 371.e15 | xargs rpm -e 
+       recherche tous les paquet avec le mot kernel, de version 371.e15  
 
+installer les paquets 
+# rpm -ivh vim-common
+       les options -ivh  install verbose htag
+
+supprimer un paquet
+# rpm -e vim-common 
+       l'option -r signifie erase 
+
+
+ Fichiers de configuration réseau
+ --------------------------------
+Network config :
+# /etc/sysconfig/network
+# /etc/sysconfig/network-scripts/
+# /etc/resolv.conf
+
+Interface graphique de la configuration réseaux :
+# system-configs-network-tui 
+
+
+Redémarrer le service réseau :
+# service gpm restart
+# wich service
+# file /sbi/service
+
+ Firewall
+ --------
+#  
+
+ NTP (Network Transfert Protocole)
+ ---
+# yum search ntp
+# rpm -q ntp
+# cd /etc/init.d
+# ls
+# service ntp status
+# chkconfig --list ntpd
+# rpm -qc ntp
+  quel sont les fichier de configuration de ntp
+
+# rpm -qd ntp
+  quel sont les fichier de documentation de ntp
 
 
