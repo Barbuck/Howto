@@ -8,7 +8,7 @@ Introduction
 Le processus de dévellopement est completment transparant et ouvert,
  constamment 3 veresion dispo :
           
-           |--> (3) version stable ( weezy version 7.0 )
+           |--> (3) version stable ( wheezy version 7.0 )
            |
      |--> (2) version test ( ) version en cours de dévellopement
      | 
@@ -24,11 +24,100 @@ partitionner
 Swap  ext4    Egale à la RAM si supérieur à 512Mo, si inférieur à 512Mo swap= 2x la RAM
 /     ext4    Partition Principale
 
-choix du noyaux :
-486 pour les vielles machines mono-processeur
-686 pour les machines récentes
+Choix du noyau :
+ 486 pour les vielles machines mono-processeur
+ 686 pour les machines récentes
 
-config de l'outil de gestion des paquets:
-Cocher oui, pour permettre l'installation des paquets non-libre
+Config de l'outil de gestion des paquets:
+ Cocher oui, pour permettre l'installation des paquets non-libres
+
+Sélection des logiciels
+ Partir de rien permet une installation plus légères
+
+UTC
+ Dans le cas d'un double boot avec Windows cocher non
 
 
+----[=>-------------------------------------------------------------------------------------------
+
+
+DOC : http://debian-handbook.info/browse/fr-FR/stable/index.html
+      http://github.com/kikinovak/debian
+
+
+
+Gestion des paquets 
+-------------------
+
+dpkg ( Debian package )  
+
+# dpkg list
+
+
+
+apt-get ou aptitude (depuis la version sqweez)
+
+exemple -> installation du paquet tree pour visualisé les arborressences de fichier
+
+# aptitude search tree                          recherche les packet tree
+# aptitude install tree                         installation du paquet
+# aptitude -y install tree                      option -y évite la confirmation du DL 
+                                                et Install des dépendences
+
+
+ 
+# aptitude remove tree                          désinstalle le packet et ses dépendances 
+                                                dont il est le seul
+                                                logiciel à utiliser ces dépendances/bibliothèque
+
+
+
+# aptitude safe-upgrade                         Mise à jour des packet
+# aptitude full-upgrade                         installe aussi les dépendence exterieur 
+                                                et la Maj du Kernel
+
+
+
+
+tasksel  Métapacket pour installer des logiciel/service global
+
+# tasksel --list                                afficher la liste de tout les logiciel que l'on 
+                                                peu installer
+# tasksel --list-tasks
+
+# tasksel install ssh-server                    install tous les packet nécéssaire aux logiciel pour 
+                                                fonctionner un minimum
+# tasksel remove ssh-server                     désinstalle tous les packet du logiciel ssh-server
+
+
+
+
+
+ Firefox ( Sous-Debian > Iceweasel )
+ -------
+
+# aptitude search iceweasel
+# aptitude install iceweasel
+# aptitude search icweasel-l10n-fr              chercher le plugin langue Françcaise
+# aptitude install iceweasel-l10-fr             installer le plugin FR
+
+
+# aptitude install iceweasel-adblock-plus       installer le bloc-Pub Adblock
+
+ 
+
+ Thunderbird ( Sous Debian -> Icedove )
+ -----------
+
+# aptitude search icedove
+# aptitude install icedove
+# aptitude install icedove-l10n-fr              mettre en version français
+
+ 
+
+ Libre Office
+ ------------
+
+# aptitude search libreoffice
+# aptitude install libreoffice
+# aptitude install libreoffice-l10-fr           mettre en version français
